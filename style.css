@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Balsamiq Sans", cursive;
+  color: #ebebeb;
+}
+
+body {
+  background-color: #c7bfbf;
+  background-image: url("https://www.soyuz.ru/public/uploads/files/2/7451884/202011301711014c6493cfda.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .version {
+  position: fixed;
+  bottom: 5px;
+  left: 5px;
+  color: red;
+}
+
+body main {
+  width: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+body main .hits {
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body main .hits .hit {
+  background-color: grey;
+  width: 45%;
+  font-size: 25px;
+  margin-top: 10px;
+  margin-bottom: -10p;
+}
+
+body main .info {
+  z-index: 1;
+  overflow: hidden;
+}
+
+body main .info .hp {
+  -webkit-transition: 1s;
+  transition: 1s;
+  width: 245px;
+  position: absolute;
+  top: 215px;
+  z-index: 1;
+  margin-left: 200px;
+  margin-top: -40px;
+}
+
+body main .info .hpbar {
+  background-color: white;
+  color: #c8c8c8;
+  height: 15px;
+  width: 10%;
+  z-index: 35;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body main .info .bodyArmor {
+  position: relative;
+  left: 350px;
+  top: -40px;
+  z-index: 3;
+  border-radius: 5px;
+}
+
+body main .info .headArmor {
+  position: relative;
+  left: 350px;
+  top: -40px;
+  z-index: 3;
+  border-radius: 5px;
+}
+
+body main .info .deathCounter {
+  color: #c8c6c6;
+  position: relative;
+  top: -60px;
+  z-index: 3;
+  left: 200px;
+}
+
+body main .info .hero {
+  z-index: 2;
+  position: relative;
+}
+
+body main .info .hpDisplay {
+  position: relative;
+  z-index: 43;
+  color: #c8c6c6;
+  top: -100px;
+  left: 260px;
+}
+
+body main .man {
+  position: fixed;
+  top: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: flex;
+  width: 100%;
+  z-index: 1;
+}
+
+body main .man .body {
+  max-height: 650px;
+  min-height: 700px;
+  margin-left: 30px;
+  margin-right: 55px;
+}
+
+body main .man .face {
+  position: fixed;
+  margin: 0 auto;
+  top: 200px;
+  max-width: 200px;
+}
+
+body main .man .fists {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  position: fixed;
+  margin-top: -50px;
+}
+
+body main .man .fistLeft {
+  margin-left: -250px;
+}
+
+body main .man .fistRight {
+  margin-left: 250px;
+}
+
+body main .man .fist {
+  -webkit-transition: 0.05s;
+  transition: 0.05s;
+  margin-top: 50px;
+}
+
+body .damage {
+  position: fixed;
+  margin: 0 auto;
+  top: 350px;
+  left: 50%;
+  color: black;
+  font-weight: bold;
+  font-size: 55px;
+}
+
+body .baloons {
+  position: absolute;
+  z-index: 0;
+  top: 550px;
+  max-height: 30vh;
+  width: contain;
+}
+/*# sourceMappingURL=style.css.map */
