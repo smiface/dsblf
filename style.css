@@ -8,7 +8,11 @@
 
 body {
   background-color: #c7bfbf;
-  background-image: url("https://www.soyuz.ru/public/uploads/files/2/7451884/202011301711014c6493cfda.jpg");
+  background-image: url("./img/bg.jpg");
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
@@ -151,7 +155,7 @@ body main .man .face {
   position: fixed;
   margin: 0 auto;
   top: 200px;
-  max-width: 200px;
+  max-width: 250px;
 }
 
 body main .man .fists {
@@ -162,11 +166,11 @@ body main .man .fists {
 }
 
 body main .man .fistLeft {
-  margin-left: -250px;
+  margin-left: -400px;
 }
 
 body main .man .fistRight {
-  margin-left: 250px;
+  margin-left: 400px;
 }
 
 body main .man .fist {
@@ -178,7 +182,7 @@ body main .man .fist {
 body .damage {
   position: fixed;
   margin: 0 auto;
-  top: 350px;
+  top: 370px;
   left: 50%;
   color: black;
   font-weight: bold;

@@ -12,7 +12,13 @@
 </head>
 
 <body>
-    <p class="version">v0.12</p>
+
+    <div class="version"> <audio controls src="./sounds/ambient.mp3" loop="loop">
+            Your browser does not support the
+            <code>audio</code> element.
+        </audio> 
+        v0.14
+    </div>
     <main>
         <div class="hits">
             <button class="hit hitLeft">left hit</button>
@@ -24,7 +30,7 @@
             <img src="./img/head0.png" alt="" class="headArmor">
             <img src="./img/hp.png" alt="" srcset="" class="hero">
             <div class="deathCounter">Перекуров : 0 </div>
-            <div class="hpDisplay">123</div>
+            <div class="hpDisplay"></div>
             <div class="hp">
                 <div class="hpbar"></div>
             </div>
@@ -32,14 +38,13 @@
 
         <div class="man">
             <img class=" fists fistLeft" src="./img/fist3.png" />
-            <!-- <img class="body" src="./img/man.png" alt=""> -->
-            <img class="body" src="" alt="">
+            <img class="body" src="./img/body.png" alt="">
             <img class="face" src="./img/x1.png" alt="">
             <img class=" fists fistRight" src="./img/fist1.png" />
         </div>
 
         <div class="damage"></div>
-    <!-- <img src="./img/baloon2.png" alt="" class="baloons"> -->
+        <!-- <img src="./img/baloon2.png" alt="" class="baloons"> -->
     </main>
 
     <script src="main.js"></script>

@@ -9,10 +9,15 @@
 
 body {
     background-color: rgb(199, 191, 191);
-    background-image: url("https://www.soyuz.ru/public/uploads/files/2/7451884/202011301711014c6493cfda.jpg");
+    // background-image: url("https://www.soyuz.ru/public/uploads/files/2/7451884/202011301711014c6493cfda.jpg");
     // background-image: url("https://media.contentapi.ea.com/content/dam/apex-legends/common/map-comparison-slider-assets/apex-comparison-s2-shattered-forest-after.jpg");
     // background-image: url("https://cdn.discordapp.com/attachments/468501401350176798/829013774795145216/Screenshot_171.png");
     // background-image: url("https://saintbasil.ru/img.php?ipt=https://3dnews.ru/assets/external/illustrations/2020/02/21/1004190/1.jpg");
+    // background-image: url('http://artofbeat.com/wordpress/wp-content/uploads/2014/09/conceptInterior.jpg');
+    background-image: url('./img/bg.jpg');
+    transition: 1s;
+    backdrop-filter: blur(3px);
+    
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
@@ -119,7 +124,7 @@ body {
                 position: fixed;
                 margin: 0 auto;
                 top: 200px;
-                max-width: 200px;
+                max-width: 250px;
             }
             .fists {
                 transition: 0.2s;
@@ -127,12 +132,12 @@ body {
                 margin-top: -50px;
             }
             .fistLeft {
-                margin-left: -250px;
+                margin-left: -400px;
                 // margin-left: -100px;
             }
 
             .fistRight {
-                margin-left: 250px;
+                margin-left: 400px;
                 // margin-left: 50px;
             }
 
@@ -146,7 +151,7 @@ body {
     .damage {
         position: fixed;
         margin: 0 auto;
-        top: 350px;
+        top: 370px;
         left: 50%;
         color: black;
         font-weight: bold;

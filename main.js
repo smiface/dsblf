@@ -13,10 +13,15 @@ let headArmor = document.querySelector('.headArmor')
 let deathCounter = document.querySelector('.deathCounter')
 let damageDisplay = document.querySelector('.damage')
 
-function playRandomMoan() {
-    // let number = Math.floor(Math.random() * 12)
-    let song = new Audio('./sounds/punch.mp3')
-    // let song = new Audio('./sounds/Moan ' + number + '.wav')
+setInterval(() => {
+    document.body.style.backdropFilter == 'blur(5px)' ?
+        document.body.style.backdropFilter = 'blur(2px)' :
+        document.body.style.backdropFilter = 'blur(5px)'
+}, 1000);
+
+function playSound(path, volume) {
+    let song = new Audio(path)
+    if (volume) { song.volume = volume }
     song.play()
 }
 
@@ -30,29 +35,16 @@ let defaultDed = {
 let attackDelay = 300;
 let ded;
 
-if (localStorage.getItem('ded') == undefined) {
-    ded = defaultDed
-} else {
-    let localDed = JSON.parse(localStorage.getItem('ded'))
-    ded = localDed
-}
+(localStorage.getItem('ded') == undefined) ? ded = defaultDed : ded = JSON.parse(localStorage.getItem('ded'))
 
 let damageSum = function () {
-    let dmg;
-    if (ded.armor < 9) {
-        dmg = 10 - ded.armor
-    } else {
-        dmg = 1
-    }
-
-    return (
-        dmg
-    )
+    return ded.armor < 9 ? 10 - ded.armor : 1
 }
 
 function updateDed() {
     localStorage.setItem('ded', JSON.stringify(ded))
 }
+
 function updateArmor() {
     if (ded.armor < 4) {
         bodyArmor.src = './img/armor' + ded.armor + '.png'
@@ -61,13 +53,17 @@ function updateArmor() {
         headArmor.src = './img/armor' + ded.armor + '.png'
     }
 }
+
 function updateHpBar() {
     hpDisplay.innerHTML = ded.hp
+
     hpbar.style.width = ded.hp + '%'
 }
+
 function updateDamageDisplay(number) {
     damageDisplay.innerHTML = number
 }
+
 function updateDeathDisplay() {
     deathCounter.innerHTML = 'Перекуров : ' + ded.deathCount;
 }
@@ -91,8 +87,8 @@ function hitSide(btn, action) {
     }
     btn.disabled = true
     action()
-    playRandomMoan()
-    if (ded.hp < 21) {
+    playSound('./sounds/punch.mp3')
+    if (ded.hp < 11) {
         ded.armor++
         hpDisplay.innerHTML = ded.hp -= damageSum()
         ded.deathCount++
@@ -113,10 +109,10 @@ hitLeftBtn.onclick = () => {
 }
 
 function hitRight() {
-    hit(fistRight, '250px', '50px', './img/fist1.png', './img/fist2.png')
+    hit(fistRight, '400px', '150px', './img/fist1.png', './img/fist2.png')
 }
 function hitLeft() {
-    hit(fistLeft, '-250px', '-100px', './img/fist3.png', './img/fist4.png')
+    hit(fistLeft, '-400px', '-250px', './img/fist3.png', './img/fist4.png')
 }
 
 function hit(side, marginBefore, marginAfter, fistBefore, fistAfter) {
@@ -166,5 +162,6 @@ function healing() {
             healing()
         }, attackDelay);
     }
+    updateDed()
     updateHpBar()
 }
