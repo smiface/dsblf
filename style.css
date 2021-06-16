@@ -161,9 +161,10 @@ body main .man .body {
 body main .man .face {
   position: fixed;
   margin: 0 auto;
+  margin-top: -30px;
   top: 200px;
-  min-width: 200px;
-  max-width: 250px;
+  min-height: 250px;
+  max-width: 300px;
 }
 
 body main .man .fists {
