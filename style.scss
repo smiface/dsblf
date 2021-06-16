@@ -26,10 +26,16 @@ body {
     .version {
         position: fixed;
         bottom: 5px;
-        left: 5px;
+        right:5px;
         color: red;
     }
 
+    iframe {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        z-index: 999;
+    }
     main {
         width: 500px;
         display: flex;
@@ -115,15 +121,16 @@ body {
             width: 100%;
             z-index: 1;
             .body {
-                max-height: 650px;
+                max-height: 750px;
                 min-height: 700px;
-                margin-left: 30px;
+                margin-left: 50px;
                 margin-right: 55px;
             }
             .face {
                 position: fixed;
                 margin: 0 auto;
                 top: 200px;
+                min-width: 200px;
                 max-width: 250px;
             }
             .fists {
