@@ -87,7 +87,7 @@ function hitSide(btn, action) {
     }
     btn.disabled = true
     action()
-    playSound('./sounds/punch.mp3')
+    playSound('./sounds/punch.mp3', 0.05)
     if (ded.hp < 11) {
         ded.armor++
         hpDisplay.innerHTML = ded.hp -= damageSum()
